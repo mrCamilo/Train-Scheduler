@@ -9,6 +9,6 @@ h2 {
     text-align: center;
 }
 
-#noScrollBar {
-    overflow: hidden;
+footer {
+    margin-bottom: 15px;
 }
