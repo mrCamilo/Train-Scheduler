@@ -32,7 +32,15 @@ $("#anotherRow").on("click", function(event) {
     destination: destinationName,
     firstTrain: firstTrainTime,
     frequency: frequencyInput
-  }
+  };
+
+  database.ref().push(newRow);
+
+  console.log(newRow.name);
+  console.log(newRow.destination);
+  console.log(newRow.firstTrain);
+  console.log(newRow.frequency);
 })
 
-database.ref().push(newRow);
+
+
