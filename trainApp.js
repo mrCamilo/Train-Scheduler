@@ -49,5 +49,21 @@ $("#anotherRow").on("click", function(event) {
   $("#freqInput").val("");
 })
 
+database.ref().on("child_added", function(childSnapshot) {
+  console.log(childSnapshot.val());
+
+    // Store everything into a variable.
+    var trainName = childSnapshot.val().name;
+    var destinationName = childSnapshot.val().destination;
+    var firstTrainTime = childSnapshot.val().firstTrain;
+    var frequencyInput = childSnapshot.val().frequency;
+  
+    // Employee Info
+    console.log(trainName);
+    console.log(destinationName);
+    console.log(firstTrainTime);
+    console.log(frequencyInput);
+})
+
 
 
