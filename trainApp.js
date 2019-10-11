@@ -58,11 +58,22 @@ database.ref().on("child_added", function(childSnapshot) {
     var firstTrainTime = childSnapshot.val().firstTrain;
     var frequencyInput = childSnapshot.val().frequency;
   
-    // Employee Info
+    // train Info logs
     console.log(trainName);
     console.log(destinationName);
     console.log(firstTrainTime);
     console.log(frequencyInput);
+
+    // Create the new row
+    var addRow = $("<tr>").append(
+    $("<td>").text(trainName),
+    $("<td>").text(destinationName),
+    $("<td>").text(firstTrainTime),
+    $("<td>").text(frequencyInput)
+  );
+
+    // Append the new row to the table
+    $("#trainTable > tbody").append(addRow);
 })
 
 
