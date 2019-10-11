@@ -64,12 +64,38 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log(firstTrainTime);
     console.log(frequencyInput);
 
+      // using frequency and firstTrainTime we calculate how many minutes away the next train is
+      // First Time (pushed back 1 year to make sure it comes before current time)
+      var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
+      console.log(firstTimeConverted);
+
+      // Current Time
+      var currentTime = moment();
+      console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+      // Difference between the times
+      var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+      console.log("DIFFERENCE IN TIME: " + diffTime);
+
+      // Time apart (remainder)
+      var tRemainder = diffTime % frequencyInput;
+      console.log(tRemainder);
+
+      // Minute Until Train
+      var tMinutesTillTrain = frequencyInput - tRemainder;
+      console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+      // Next Train
+      var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
+      console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
     // Create the new row
     var addRow = $("<tr>").append(
     $("<td>").text(trainName),
     $("<td>").text(destinationName),
     $("<td>").text(firstTrainTime),
-    $("<td>").text(frequencyInput)
+    $("<td>").text(nextTrain),
+    $("<td>").text(tMinutesTillTrain)
   );
 
     // Append the new row to the table
