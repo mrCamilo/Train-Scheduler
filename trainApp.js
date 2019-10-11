@@ -21,9 +21,9 @@ $("#anotherRow").on("click", function(event) {
   event.preventDefault();
 
   // inputs
-  var trainName = $("#trainNameInput").val().trim();
-  var destinationName = $("#destinationInput").val().trim();
-  var firstTrainTime = $("#firstTrainTimeInput").val().trim();
+  var trainName = $("#trainInput").val().trim();
+  var destinationName = $("#destInput").val().trim();
+  var firstTrainTime = $("#timeInput").val().trim();
   var frequencyInput = $('#freqInput').val().trim();
 
   // object with the inputs
@@ -31,7 +31,8 @@ $("#anotherRow").on("click", function(event) {
     name: trainName,
     destination: destinationName,
     firstTrain: firstTrainTime,
-    freqency: frequencyInput
+    frequency: frequencyInput
   }
 })
 
+database.ref().push(newRow);
