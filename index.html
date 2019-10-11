@@ -5,14 +5,12 @@
   <meta charset="UTF-8">
   <title>Trains!! :)</title>
   <!--link to JQuery-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
   <!--link to Bootstrap and CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <!-- Moment JS -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <!--// Firebase!-->
-  <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+
 </head>
 
 <header>
@@ -50,24 +48,33 @@
     <form>
       <div class="form-group">
         <label for="trainNameInput">Train Name</label>
-        <input type="text" class="form-control" placeholder="Train?">
+        <input type="text" class="form-control" id = "trainInput" placeholder="Train?">
       </div>
       <div class="form-group">
         <label for="destinationInput">Destination?</label>
-        <input type="text" class="form-control" placeholder="Where are you going?">
+        <input type="text" class="form-control" id = "destInput" placeholder="Where are you going?">
       </div>
       <div class="form-group">
         <label for="firstTrainTimeInput">First Train Time?</label>
-        <input type="text" class="form-control" placeholder="Time">
+        <input type="text" class="form-control" id = "timeInput" placeholder="Time">
       </div>
       <div class="form-group">
         <label for="frequencyInput">Frequency (min)</label>
-        <input type="text" class="form-control" placeholder="Frequency in minutes">
+        <input type="text" class="form-control" id = "freqInput" placeholder="Frequency in minutes">
       </div>
-      <button type="submit" class="btn btn-primary">Submit.</button>
+      <button type="submit" class="btn btn-primary" id="anotherRow">Submit.</button>
     </form>      
   </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<!--// Firebase!-->
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+<!-- Specific Firebase products we want -->
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+<script src="./trainApp.js"></script>
 </body>
+
+
 
 <footer></footer>
