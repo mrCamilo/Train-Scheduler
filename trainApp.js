@@ -40,6 +40,13 @@ $("#anotherRow").on("click", function(event) {
   console.log(newRow.destination);
   console.log(newRow.firstTrain);
   console.log(newRow.frequency);
+
+  alert("New train info added!");
+
+  $("#trainInput").val("");
+  $("#destInput").val("");
+  $("#timeInput").val("");
+  $("#freqInput").val("");
 })
 
 
