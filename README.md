@@ -17,7 +17,7 @@ Parse, validate, manipulate, and display dates and times in JavaScript.
 - Updates arrival of next train through Firebase in real time
 
 
-## Code example
+## Screenshots
 [![Screenshot](https://i.imgur.com/ufswwkT.png)](https://i.imgur.com/ufswwkT.png)
 [![Screenshot](https://i.imgur.com/v7DqDyY.png)](https://i.imgur.com/v7DqDyY.png)
 
