@@ -23,6 +23,8 @@ Parse, validate, manipulate, and display dates and times in JavaScript.
 
 
 ## How to use
+1. Open github pages link and view train info/update new trains.
+or
 1. Pull repo
 2. type (npm i) i  terminal to install all dependencies
 4. run the file through node (npm app.js)
